@@ -1,0 +1,16 @@
+C:\repos\.net\AdventureWork\AdventureWork.Infra.CrossCutting.IoC\bin\Debug\netstandard2.0\AdventureWork.Application.dll
+C:\repos\.net\AdventureWork\AdventureWork.Infra.CrossCutting.IoC\bin\Debug\netstandard2.0\AdventureWork.Domain.dll
+C:\repos\.net\AdventureWork\AdventureWork.Infra.CrossCutting.IoC\bin\Debug\netstandard2.0\AdventureWork.Infra.Data.dll
+C:\repos\.net\AdventureWork\AdventureWork.Infra.CrossCutting.IoC\obj\Debug\netstandard2.0\AdventureWork.Infra.CrossCutting.IoC.csprojAssemblyReference.cache
+C:\repos\.net\AdventureWork\AdventureWork.Infra.CrossCutting.IoC\obj\Debug\netstandard2.0\AdventureWork.Infra.CrossCutting.IoC.AssemblyInfoInputs.cache
+C:\repos\.net\AdventureWork\AdventureWork.Infra.CrossCutting.IoC\obj\Debug\netstandard2.0\AdventureWork.Infra.CrossCutting.IoC.AssemblyInfo.cs
+C:\repos\.net\AdventureWork\AdventureWork.Infra.CrossCutting.IoC\bin\Debug\netstandard2.0\AdventureWork.Infra.CrossCutting.IoC.deps.json
+C:\repos\.net\AdventureWork\AdventureWork.Infra.CrossCutting.IoC\bin\Debug\netstandard2.0\AdventureWork.Infra.CrossCutting.IoC.dll
+C:\repos\.net\AdventureWork\AdventureWork.Infra.CrossCutting.IoC\bin\Debug\netstandard2.0\AdventureWork.Infra.CrossCutting.IoC.pdb
+C:\repos\.net\AdventureWork\AdventureWork.Infra.CrossCutting.IoC\bin\Debug\netstandard2.0\AdventureWork.Application.pdb
+C:\repos\.net\AdventureWork\AdventureWork.Infra.CrossCutting.IoC\bin\Debug\netstandard2.0\AdventureWork.Domain.pdb
+C:\repos\.net\AdventureWork\AdventureWork.Infra.CrossCutting.IoC\bin\Debug\netstandard2.0\AdventureWork.Infra.Data.pdb
+C:\repos\.net\AdventureWork\AdventureWork.Infra.CrossCutting.IoC\obj\Debug\netstandard2.0\AdventureWork.Infra.CrossCutting.IoC.csproj.CoreCompileInputs.cache
+C:\repos\.net\AdventureWork\AdventureWork.Infra.CrossCutting.IoC\obj\Debug\netstandard2.0\AdventureWork.Infra.CrossCutting.IoC.csproj.CopyComplete
+C:\repos\.net\AdventureWork\AdventureWork.Infra.CrossCutting.IoC\obj\Debug\netstandard2.0\AdventureWork.Infra.CrossCutting.IoC.dll
+C:\repos\.net\AdventureWork\AdventureWork.Infra.CrossCutting.IoC\obj\Debug\netstandard2.0\AdventureWork.Infra.CrossCutting.IoC.pdb

@@ -1,0 +1,134 @@
+2021-01-31 09:57:51,714 [1] INFO  Application started. Press Ctrl+C to shut down. 
+ 
+2021-01-31 09:57:51,724 [1] INFO  Hosting environment: Development 
+ 
+2021-01-31 09:57:51,726 [1] INFO  Content root path: C:\repos\.net\AdventureWork\AdventureWork.Api 
+ 
+2021-01-31 09:58:02,054 [4] WARN  Failed to determine the https port for redirect. 
+ 
+2021-01-31 10:01:45,630 [1] INFO  Application started. Press Ctrl+C to shut down. 
+ 
+2021-01-31 10:01:45,642 [1] INFO  Hosting environment: Development 
+ 
+2021-01-31 10:01:45,644 [1] INFO  Content root path: C:\repos\.net\AdventureWork\AdventureWork.Api 
+ 
+2021-01-31 10:01:49,316 [7] WARN  Failed to determine the https port for redirect. 
+ 
+2021-01-31 10:05:51,987 [1] INFO  Application started. Press Ctrl+C to shut down. 
+ 
+2021-01-31 10:05:51,999 [1] INFO  Hosting environment: Development 
+ 
+2021-01-31 10:05:52,002 [1] INFO  Content root path: C:\repos\.net\AdventureWork\AdventureWork.Api 
+ 
+2021-01-31 10:05:54,852 [7] WARN  Failed to determine the https port for redirect. 
+ 
+2021-01-31 10:06:11,107 [1] INFO  Application started. Press Ctrl+C to shut down. 
+ 
+2021-01-31 10:06:11,119 [1] INFO  Hosting environment: Development 
+ 
+2021-01-31 10:06:11,121 [1] INFO  Content root path: C:\repos\.net\AdventureWork\AdventureWork.Api 
+ 
+2021-01-31 10:06:13,731 [4] WARN  Failed to determine the https port for redirect. 
+ 
+2021-01-31 10:08:06,506 [1] INFO  Application started. Press Ctrl+C to shut down. 
+ 
+2021-01-31 10:08:06,519 [1] INFO  Hosting environment: Development 
+ 
+2021-01-31 10:08:06,521 [1] INFO  Content root path: C:\repos\.net\AdventureWork\AdventureWork.Api 
+ 
+2021-01-31 10:08:10,232 [9] WARN  Failed to determine the https port for redirect. 
+ 
+2021-01-31 10:11:31,945 [1] INFO  Application started. Press Ctrl+C to shut down. 
+ 
+2021-01-31 10:11:31,957 [1] INFO  Hosting environment: Development 
+ 
+2021-01-31 10:11:31,959 [1] INFO  Content root path: C:\repos\.net\AdventureWork\AdventureWork.Api 
+ 
+2021-01-31 10:11:35,902 [7] WARN  Failed to determine the https port for redirect. 
+ 
+2021-01-31 10:12:50,064 [7] ERROR An unhandled exception has occurred while executing the request. 
+ 
+System.ArgumentException: Object of type 'System.String' cannot be converted to type 'System.Int32'.
+   at AdventureWork.Infra.Data.Extensions.DataReaderExtensions.MapToList[T](IDataReader dr) in C:\repos\.net\AdventureWork\AdventureWork.Infra.Data\Extensions\DataReaderExtensions.cs:line 39
+   at AdventureWork.Infra.Data.Repositories.ProductRepository.GetAll() in C:\repos\.net\AdventureWork\AdventureWork.Infra.Data\Repositories\ProductRepository.cs:line 47
+   at AdventureWork.Api.Controllers.ProductController.Get() in C:\repos\.net\AdventureWork\AdventureWork.Api\Controllers\ProductController.cs:line 27
+   at lambda_method2(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.ResponseCompression.ResponseCompressionMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-01-31 10:15:13,140 [1] INFO  Application started. Press Ctrl+C to shut down. 
+ 
+2021-01-31 10:15:13,151 [1] INFO  Hosting environment: Development 
+ 
+2021-01-31 10:15:13,153 [1] INFO  Content root path: C:\repos\.net\AdventureWork\AdventureWork.Api 
+ 
+2021-01-31 10:15:16,342 [8] WARN  Failed to determine the https port for redirect. 
+ 
+2021-01-31 10:15:45,777 [1] INFO  Application started. Press Ctrl+C to shut down. 
+ 
+2021-01-31 10:15:45,789 [1] INFO  Hosting environment: Development 
+ 
+2021-01-31 10:15:45,791 [1] INFO  Content root path: C:\repos\.net\AdventureWork\AdventureWork.Api 
+ 
+2021-01-31 10:15:48,962 [4] WARN  Failed to determine the https port for redirect. 
+ 
+2021-01-31 10:18:24,669 [1] INFO  Application started. Press Ctrl+C to shut down. 
+ 
+2021-01-31 10:18:24,681 [1] INFO  Hosting environment: Development 
+ 
+2021-01-31 10:18:24,683 [1] INFO  Content root path: C:\repos\.net\AdventureWork\AdventureWork.Api 
+ 
+2021-01-31 10:18:28,021 [7] WARN  Failed to determine the https port for redirect. 
+ 
+2021-01-31 10:19:15,987 [1] INFO  Application started. Press Ctrl+C to shut down. 
+ 
+2021-01-31 10:19:15,999 [1] INFO  Hosting environment: Development 
+ 
+2021-01-31 10:19:16,001 [1] INFO  Content root path: C:\repos\.net\AdventureWork\AdventureWork.Api 
+ 
+2021-01-31 10:19:21,856 [4] WARN  Failed to determine the https port for redirect. 
+ 
+2021-01-31 10:23:31,533 [1] INFO  Application started. Press Ctrl+C to shut down. 
+ 
+2021-01-31 10:23:31,544 [1] INFO  Hosting environment: Development 
+ 
+2021-01-31 10:23:31,546 [1] INFO  Content root path: C:\repos\.net\AdventureWork\AdventureWork.Api 
+ 
+2021-01-31 10:23:34,707 [4] WARN  Failed to determine the https port for redirect. 
+ 
+2021-01-31 10:24:06,408 [1] INFO  Application started. Press Ctrl+C to shut down. 
+ 
+2021-01-31 10:24:06,420 [1] INFO  Hosting environment: Development 
+ 
+2021-01-31 10:24:06,422 [1] INFO  Content root path: C:\repos\.net\AdventureWork\AdventureWork.Api 
+ 
+2021-01-31 10:24:09,419 [4] WARN  Failed to determine the https port for redirect. 
+ 
+2021-01-31 10:40:01,728 [1] INFO  Application started. Press Ctrl+C to shut down. 
+ 
+2021-01-31 10:40:01,740 [1] INFO  Hosting environment: Development 
+ 
+2021-01-31 10:40:01,742 [1] INFO  Content root path: C:\repos\.net\AdventureWork\AdventureWork.Api 
+ 
+2021-01-31 10:40:22,549 [1] INFO  Application started. Press Ctrl+C to shut down. 
+ 
+2021-01-31 10:40:22,560 [1] INFO  Hosting environment: Development 
+ 
+2021-01-31 10:40:22,562 [1] INFO  Content root path: C:\repos\.net\AdventureWork\AdventureWork.Api 
+ 
+2021-01-31 10:40:26,873 [4] WARN  Failed to determine the https port for redirect. 
+ 
