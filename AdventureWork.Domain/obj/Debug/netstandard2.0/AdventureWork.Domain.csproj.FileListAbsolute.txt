@@ -1,9 +1,0 @@
-C:\repos\.net\AdventureWork\AdventureWork.Domain\bin\Debug\netstandard2.0\AdventureWork.Domain.deps.json
-C:\repos\.net\AdventureWork\AdventureWork.Domain\bin\Debug\netstandard2.0\AdventureWork.Domain.dll
-C:\repos\.net\AdventureWork\AdventureWork.Domain\bin\Debug\netstandard2.0\AdventureWork.Domain.pdb
-C:\repos\.net\AdventureWork\AdventureWork.Domain\obj\Debug\netstandard2.0\AdventureWork.Domain.AssemblyInfoInputs.cache
-C:\repos\.net\AdventureWork\AdventureWork.Domain\obj\Debug\netstandard2.0\AdventureWork.Domain.AssemblyInfo.cs
-C:\repos\.net\AdventureWork\AdventureWork.Domain\obj\Debug\netstandard2.0\AdventureWork.Domain.csproj.CoreCompileInputs.cache
-C:\repos\.net\AdventureWork\AdventureWork.Domain\obj\Debug\netstandard2.0\AdventureWork.Domain.dll
-C:\repos\.net\AdventureWork\AdventureWork.Domain\obj\Debug\netstandard2.0\AdventureWork.Domain.pdb
-C:\repos\.net\AdventureWork\AdventureWork.Domain\obj\Debug\netstandard2.0\AdventureWork.Domain.csprojAssemblyReference.cache
