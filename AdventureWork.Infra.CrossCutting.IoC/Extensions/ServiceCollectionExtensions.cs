@@ -1,9 +1,13 @@
 ﻿using AdventureWork.Domain.Repositories;
 using AdventureWork.Domain.ServicesAgents;
+using AdventureWork.Infra.Data.AutoMapper;
+using AutoMapper;
+using AutoMapper.Data;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.IO;
 using System.Linq;
 using System.Reflection;
@@ -13,7 +17,6 @@ namespace AdventureWork.Infra.CrossCutting.IoC.Extensions
     internal static class ServiceCollectionExtensions
     {
         private static readonly string Prefix = typeof(ServiceCollectionExtensions).Namespace?.Split('.')[0]; // Uppermost namespace
-        private static readonly string Sufix = string.Empty;
         private static readonly IEnumerable<Assembly> AllAssemblies;
 
         static ServiceCollectionExtensions()
@@ -31,7 +34,11 @@ namespace AdventureWork.Infra.CrossCutting.IoC.Extensions
 
         public static void AddAutoMapperConfig(this IServiceCollection services)
         {
-            //services.AddAutoMapper(AllAssemblies);
+            services.AddAutoMapper(cfg =>
+            {
+                cfg.AddDataReaderMapping();
+            }, AllAssemblies);
+            AutoMapperConfig.RegisterMappings();
         }
 
         public static void UseRepositoriesAndServices(this IServiceCollection services, ServiceLifetime lifetime = ServiceLifetime.Scoped)

@@ -14,28 +14,30 @@ namespace AdventureWork.Infra.Data.Extensions
             var entity = typeof(T);
             try
             {
-                if (dr != null)
+                using (dr)
                 {
-                    var props = entity.GetProperties(BindingFlags.Instance | BindingFlags.Public);
-                    var propDic = props.ToDictionary(p => p.Name.ToUpper(), p => p);
-                    while (dr.Read())
+                    if (dr != null)
                     {
-                        var newObject = new T();
-                        for (var i = 0; i < dr.FieldCount; i++)
+                        var props = entity.GetProperties(BindingFlags.Instance | BindingFlags.Public);
+                        var propDic = props.ToDictionary(p => p.Name.ToUpper(), p => p);
+                        while (dr.Read())
                         {
-                            if (!propDic.ContainsKey(dr.GetName(i).ToUpper())) continue;
-                            var info = propDic[dr.GetName(i).ToUpper()];
-                            if (info == null || !info.CanWrite) continue;
-                            var val = dr.GetValue(i);
-                            info.SetValue(newObject, (val == DBNull.Value) ? null : val, null);
+                            var newObject = new T();
+                            for (var i = 0; i < dr.FieldCount; i++)
+                            {
+                                if (!propDic.ContainsKey(dr.GetName(i).ToUpper())) continue;
+                                var info = propDic[dr.GetName(i).ToUpper()];
+                                if (info == null || !info.CanWrite) continue;
+                                var val = dr.GetValue(i);
+                                info.SetValue(newObject, (val == DBNull.Value) ? null : val, null);
+                            }
+                            retVal.Add(newObject);
                         }
-                        retVal.Add(newObject);
                     }
                 }
             }
             catch (Exception ex)
             {
-                // ReSharper disable once PossibleIntendedRethrow
                 throw ex;
             }
 
@@ -48,24 +50,26 @@ namespace AdventureWork.Infra.Data.Extensions
             var entity = typeof(T);
             try
             {
-                if (dr != null)
+                using (dr)
                 {
-                    var props = entity.GetProperties(BindingFlags.Instance | BindingFlags.Public);
-                    var propDic = props.ToDictionary(p => p.Name.ToUpper(), p => p);
-                    dr.Read();
-                    for (var i = 0; i < dr.FieldCount; i++)
+                    if (dr != null)
                     {
-                        if (!propDic.ContainsKey(dr.GetName(i).ToUpper())) continue;
-                        var info = propDic[dr.GetName(i).ToUpper()];
-                        if (info == null || !info.CanWrite) continue;
-                        var val = dr.GetValue(i);
-                        info.SetValue(retVal, (val == DBNull.Value) ? null : val, null);
+                        var props = entity.GetProperties(BindingFlags.Instance | BindingFlags.Public);
+                        var propDic = props.ToDictionary(p => p.Name.ToUpper(), p => p);
+                        dr.Read();
+                        for (var i = 0; i < dr.FieldCount; i++)
+                        {
+                            if (!propDic.ContainsKey(dr.GetName(i).ToUpper())) continue;
+                            var info = propDic[dr.GetName(i).ToUpper()];
+                            if (info == null || !info.CanWrite) continue;
+                            var val = dr.GetValue(i);
+                            info.SetValue(retVal, (val == DBNull.Value) ? null : val, null);
+                        }
                     }
                 }
             }
             catch (Exception ex)
             {
-                // ReSharper disable once PossibleIntendedRethrow
                 throw ex;
             }
 

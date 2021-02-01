@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace AdventureWork.Domain.Entities
+namespace AdventureWork.Infra.Data.Dto
 {
-    public class WorkOrder : Entity
+    internal class WorkOrdersProductDto
     {
         public int WorkOrderID { get; set; }
         public int ProductID { get; set; }
@@ -14,6 +14,8 @@ namespace AdventureWork.Domain.Entities
         public DateTime DueDate { get; set; }
         public short? ScrapReasonID { get; set; }
         public DateTime ModifiedDate { get; set; }
-        public Product Product { get; set; }
+        public string Name { get; set; }
+        public string ProductNumber { get; set; }
+        public string Color { get; set; }
     }
 }

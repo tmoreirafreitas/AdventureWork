@@ -1,4 +1,5 @@
-﻿using AdventureWork.Infra.Data.Context;
+﻿using AdventureWork.Infra.CrossCutting.IoC.Extensions;
+using AdventureWork.Infra.Data.Context;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System.Data;
@@ -13,7 +14,8 @@ namespace AdventureWork.Infra.CrossCutting.IoC
             services.Configure<ConnectionStringsSetting>(configuration.GetSection("ConnectionStringsSetting"));
             services.AddScoped<IDbConnection, SqlConnection>();
             services.AddScoped<IDatabaseContextFactory, DatabaseContextFactory>();
-            services.AddScoped<IDatabaseContext, DatabaseContext>();            
+            services.AddScoped<IDatabaseContext, DatabaseContext>();
+            services.AddAutoMapperConfig();
         }
     }
 }

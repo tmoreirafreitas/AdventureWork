@@ -1,7 +1,6 @@
 ﻿using AdventureWork.Domain.Entities;
 using AdventureWork.Domain.Repositories;
 using AdventureWork.Infra.Data.Context;
-using AdventureWork.Infra.Data.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -12,10 +11,12 @@ namespace AdventureWork.Infra.Data
     public abstract class Repository<T> : IRepository<T> where T : Entity, new()
     {
         private readonly IDbCommand _command;
+        private readonly IDatabaseContext _context;
         private bool disposedValue;
 
         public Repository(IDatabaseContext context)
         {
+            _context = context;
             _command = context.Connection.CreateCommand();
         }
 
@@ -75,8 +76,13 @@ namespace AdventureWork.Infra.Data
         {
             if (string.IsNullOrEmpty(query) || string.IsNullOrWhiteSpace(query))
                 throw new ArgumentNullException("É preciso definir uma query para execução da instrução SQL.");
+
             _command.CommandText = query;
             _command.CommandType = commandType;
+
+            if (_context.Transaction != null)
+                _command.Transaction = _context.Transaction;
+
             if (parameters != null)
             {
                 foreach (var item in parameters)
@@ -89,29 +95,13 @@ namespace AdventureWork.Infra.Data
             }
         }
 
-        public T PopulateToSingle(IDataReader reader)
-        {
-            const string msg = "Objeto DataReader não foi inicializado ou está fechado...";
-            if (reader == null || reader.IsClosed)
-                throw new ArgumentNullException(msg);
-            return reader.MapToSingle<T>();
-        }
-
-        public IList<T> PopulateToList(IDataReader reader)
-        {
-            const string msg = "Objeto DataReader não foi inicializado ou está fechado...";
-            if (reader == null || reader.IsClosed)
-                throw new ArgumentNullException(msg);
-            return reader.MapToList<T>();
-        }
-
         protected virtual void Dispose(bool disposing)
         {
             if (!disposedValue)
             {
                 if (disposing)
                 {
-                    if(_command != null)
+                    if (_command != null)
                     {
                         _command.Dispose();
                     }

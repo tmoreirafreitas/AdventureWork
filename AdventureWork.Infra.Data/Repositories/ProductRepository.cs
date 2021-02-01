@@ -1,17 +1,19 @@
 ﻿using AdventureWork.Domain.Entities;
 using AdventureWork.Domain.Repositories;
 using AdventureWork.Infra.Data.Context;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using AdventureWork.Infra.Data.Extensions;
+using AutoMapper;
+using System.Collections.Generic;
 
 namespace AdventureWork.Infra.Data.Repositories
 {
     public class ProductRepository : Repository<Product>, IProductRepository
     {
-        public ProductRepository(IDatabaseContext context) : base(context)
+        private readonly IMapper _mapper;
+
+        public ProductRepository(IDatabaseContext context, IMapper mapper) : base(context)
         {
+            _mapper = mapper;
         }
 
         public IEnumerable<Product> GetAll()

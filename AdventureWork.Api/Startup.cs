@@ -1,17 +1,14 @@
 using AdventureWork.Infra.CrossCutting.IoC.Extensions;
+using AdventureWork.Infra.CrossCutting.MiddlewareFilterNotification;
+using AdventureWork.Infra.CrossCutting.MiddlewareFilterNotification.Middlewares;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace AdventureWork.Api
 {
@@ -33,7 +30,11 @@ namespace AdventureWork.Api
                 options.Providers.Add<GzipCompressionProvider>();
             });
 
-            services.AddControllers();
+            services.AddControllers(options => 
+            {
+                options.Filters.Add<NotificationFilter>();
+                options.Filters.Add<TransactionFilter>();
+            });
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "AdventureWork.Api", Version = "v1" });
@@ -55,9 +56,8 @@ namespace AdventureWork.Api
             }
 
             app.UseStaticFiles();
-            //app.UseMiddleware(typeof(RequestMiddliware));
+            app.UseMiddleware(typeof(RequestMiddleware));
             app.UseResponseCompression();
-            app.UseHttpsRedirection();
 
             app.UseRouting();
 
